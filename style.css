@@ -1,0 +1,286 @@
+body {
+    
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    overflow-x:hidden;
+    cursor: none; 
+    
+    background:red;
+}
+
+* {
+    box-sizing:border-box;
+    transition: 0s;
+}
+
+/*TEXT STYLING*/
+h2 {
+    font-weight: normal;
+    font-size: 32px;
+    
+    margin-top: 0.5em;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+ul {
+    margin: 0;
+    padding: 1em 0 0 1em;
+}
+
+.verb {
+/*    font-size:32px;*/
+    color:yellow;
+}
+
+.object {
+    color:red;
+}
+
+.disease {
+    color:white;
+}
+
+/*CURSOR STYLING*/
+.pointer {
+    position:absolute;
+    z-index:10;
+    
+    pointer-events: none;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    
+    width:auto;
+    height:2em;
+    overflow-y:hidden;
+    
+    color:red;
+/*    background:red;*/
+    overflow:visible;
+}
+
+.pointer * {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    width:100%;
+}
+
+#timer {
+    width: 15em;
+    height:2em; 
+    overflow:visible;
+}
+
+/*CONTAINER*/
+.container {
+   position:fixed;
+    z-index:10;
+    width:60vw;
+    height:calc(100vh);
+    
+/*    centering position absolute element horizontally*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow-y:scroll;
+    
+/*
+    pointer-events: none;
+    background:blue;
+*/
+}
+
+/*REPORT*/
+.report {
+    color:black;
+    
+    width:100%;
+    height:100%;
+}
+
+/*QUESTIONNAIRE / GRID*/
+.questionnaire {
+    color:yellow;
+    font-size:1.5em;
+    margin: 15% 0;
+}
+
+.questionnaire h2 {
+    font-size:2em;
+    margin-bottom:0.25em;
+}
+
+.questionnaire h3 {
+    margin-top:0;
+    padding-top:0;
+    font-size:1em;
+}
+
+.grid-container {
+    width:100%;
+    margin:0;
+    padding:0;
+    display: grid;
+    grid-template-columns: 
+      1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.grid-item {
+  border: 2px solid yellow;
+  padding: .5em;
+}
+
+.section {
+    grid-column: 1 / 11;
+    background:yellow;
+    color:red;
+}
+
+.question {
+  grid-column: 1 / 5;
+}
+
+.response {
+    grid-column: 5 / 11;
+    
+    background:rgba(255,255,255,0);
+/*    border: .5px solid black;*/
+}
+
+.item-20 {
+  grid-column: span 2;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    height:100%;
+    padding: 0;
+    margin:0;
+    
+    background:none;
+    color:red;
+    
+    font-family:sans-serif;
+    font-size:1em;
+    
+    resize:none;
+    overflow: auto;
+    border:none;
+}
+
+input[type=text]::placeholder, textarea::placeholder {
+    color: yellow;
+}
+
+/*SCROLLBAR STYLING*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar, .coda::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container, .coda {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/*VIDEOS*/
+.mouses, .scrolls, .types {
+    display:none;
+}
+
+.videos {
+    position:relative;
+    display:flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    
+    width:100vw;
+    height:calc(100vh);
+/*    background:blue;*/
+}
+
+.videos div {
+    width:100%;
+    height:100%;
+    
+    display:flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+video {
+    height: 100%; 
+    width: 100%; 
+    object-fit:cover;
+/*    mix-blend-mode:multiply;*/
+    
+    transition: opacity 1s ease-in-out;
+}
+
+.show, .hide {
+    position:absolute;
+    left:0;
+    top: 0;
+}
+
+.show {
+    z-index:2;
+    opacity:1;
+}
+
+.hide {
+    z-index:1;
+    opacity:0;
+}
+
+.fadein {
+    z-index:3;
+    opacity:0;
+}
+
+/*SCROLL*/
+
+#set-height {
+    display:block;
+}
+
+#v0, #v1, #v2, #v3 {
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+/*AUDIO*/
+.audios {
+    display:none;
+/*    max-height:20vh;*/
+}
+
+
+/*
+.ad {
+    font-size:32px;
+    text-align: center;
+    
+    max-width:60%;
+}
+*/
+

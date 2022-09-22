@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Burn</title>
+    <link rel="icon" type="image/png" href="">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    </head>
+
+  <body>
+      
+  <!-- 
+      Movement - X : <span id="movementX"></span> px<br>
+    Movement - Y : <span id="movementY"></span> px<br>
+    Movement : <span id="movement"></span> px<br>
+   Speed : <span id="speed"></span> px/s<br>-->
+      
+<!--
+      <div class="side_ad">
+            Burnt Out? Wait Till You Hear About Slow Death!
+      </div>
+-->
+      
+      <div class="container">
+          <div class="questionnaire">
+              <h2>
+                Worker's Burnout Progress Report
+              </h2>
+              
+              <h3>
+                (Formerly Titled Repetitive Strain Injury Compensation Claim Questionnaire)
+              </h3>
+              
+              <p>
+                COMPLETE THIS FORM TO HELP US DETERMINE IF YOUR PROBLEM IS WORK-RELATED.
+              </p>
+          
+              <div class="grid-container">
+                  <div class="grid-item question">
+                      Questions
+                  </div>
+                  <div class="grid-item response">
+                      Responses
+                  </div>
+                  
+                  <div class="grid-item section">
+                      Job History Questions
+                  </div>
+
+                  <div class="grid-item question">
+                      1. Current job:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      2. How long have you been doing this job?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      3. Previous jobs with similar duties?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      4. Second job?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      5. Is your employer aware of your ongoing problems? When did you inform your employer?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      6. Work activities that contribute to your claimed injury:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      7. Repetitive tasks performed in your job:
+                      <ul>
+                        <li>
+                            Weight involved with task
+                        </li>
+                        <li>
+                            Force applied to do task
+                        </li>
+                        <li>
+                            Right or left hand or both
+                        </li>
+                        <li>
+                            Hours per day
+                        </li>
+                        <li>
+                            Continuous hours performed
+                        </li>
+                        <li>
+                            Frequency/length/number of breaks
+                        </li>
+                        <li>
+                            Vibratory tools used
+                        </li>
+                      </ul>
+                  </div>  
+                  <div class="grid-item response item-20">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>  
+                  <div class="grid-item response item-20">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>  
+                  <div class="grid-item response item-20">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      8. Movements involved:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      9. Recent changes in type or number of tasks performed?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      10. Overtime or extraordinary work?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item section">
+                      Injury History
+                  </div>
+                  
+                  <div class="grid-item question">
+                      11. Describe your physical injury, including symptoms.
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      12. Location of symptom(s):
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      13. Date symptoms began:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      14. Activities performed at symptom onset:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      15. Do symptoms change when you are not at work? How?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      16. When do these symptoms bother you?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      17. What decreases symptoms?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      18. What increases symptoms?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      19. Treatments, investigations or consultations:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      20. Previous similar problems:
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      21. Do you have any other health problems? Medications?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      22. Are you right-handed or left-handed?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      23. Are there recreational activities or hobbies you are no longer able to perform? If yes, please list activities.
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      24. Do you operate a computer outside of work?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      25. What do you think caused your condition?
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                  <div class="grid-item question">
+                      
+                  </div>  
+                  <div class="grid-item response">
+                    <textarea id="textarea" name="subject" placeholder="Type here ..."></textarea>
+                  </div>
+                  
+                </div>
+              
+          </div>
+      
+        <div class="report">
+
+            <h2>
+                Is Your Pursuit of the "Good Life" through Repetitive White-Collar Labor Making Your Life Bad, Actually?
+            </h2>
+            <h3>
+                Maybe, especially for folks who agree with this headline, study says
+            </h3>
+
+            <p>
+                FRIDAY, June 23, 2017 (HealthDay News) -- People who spend lots of time on their <span class="object">smartphones</span> may be <span class="verb">scrolling</span>, <span class="verb">tapping</span> and <span class="verb">swiping</span> their way to <span class="disease">carpal tunnel syndrome</span>, a<span class="disease"> painful wrist and hand disorder</span>.
+            </p>
+
+            <p>
+                A small study found a link between extended use of <span class="object">smartphones</span> and other <span class="object">hand-held electronic devices</span> and a greater likelihood for experiencing the <span class="disease">telltale wrist and hand pain of the syndrome</span>.
+            </p>
+
+            <p>
+                But the researchers did not prove that heavy <span class="object">smartphone</span> use caused <span class="disease">carpal tunnel syndrome</span>, and one hand surgeon said very few people in the real world use their <span class="object">smartphones</span> as much as the heavy users in the study did.
+            </p>
+
+            <p>
+                Study author Peter White said the findings suggest "caution may be warranted when using <span class="object">hand-held electronic devices</span>, in order to minimize the chance of developing <span class="disease">carpal tunnel syndrome</span>."
+            </p>
+
+            <div class="">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            </div>
+
+        
+          
+            <p>
+                Carpal tunnel syndrome can gradually develop following repeated pressure to the point where the median nerve passes into the hand and meets the wrist.
+              </p>
+
+            <p>
+                A common cause, said White, are work conditions that call for "repetitive, forceful or awkward hand movements, for example, when typing." And the result is often pain (sometimes extending up the arm), numbness, finger tingling and weakened grip strength.
+              </p>
+
+            <p>
+                To explore whether smartphone use might up the carpal tunnel syndrome risk, White and his associates followed up on their prior investigation involving 500 Hong Kong University students.
+              </p>
+
+            <p>
+                The researchers also found that intensive electronics users had "significantly" more discomfort, and more severe discomfort, in their wrist and hand.
+            </p>
+
+            <p>
+                The more time a person spent using a hand-held electronic device, the more intense and long-lasting their wrist and hand pain was.
+              </p>
+
+            <p>
+                To explain why, the researchers pointed to device design, which requires the repeated use of fingers to <span class="verb">click</span>, <span class="verb">swipe</span>, <span class="verb">scroll</span>, <span class="verb">tap</span> and press. The result is an enlargement and flattening of the median nerve, alongside bulging of a key ligament.
+              </p>
+
+            <p>
+                To minimize risk, White advises keeping the wrist as straight as possible when using devices.
+              </p>
+
+            <p>
+                He added, "One should try to minimize repetitive movements of one's fingers and thumb when using hand-held electronic devices, especially for single-hand use. It is also important to take regular rest periods, so as to avoid continuous intensive use, so as to allow recovery time and to prevent prolonged stress."
+              </p>
+
+            <p>
+                Cage, who's with San Diego Hand Specialists, also suggested that "it is unlikely that the general population would have [the] degree of phone use" seen among the intensive users in the study.
+              </p>
+
+            <p>
+                "This is likely an issue affecting only a small percentage of cellphone users," she said.
+
+
+              </p>
+          </div>
+          
+      </div>
+      
+      <div class="videos">
+          
+<!--          CLICKS  -->  
+          <div class="clicks">
+              <div class="click1s">
+                  <video class="click1 show" data-index="0" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/click/click_1/click1_0.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="click1 hide fadein"  data-index="1" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/click/click_1/click1_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="click1 hide" data-index="2" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/click/click_1/click1_2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="click1 hide" data-index="3" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/click/click_1/click1_3.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                </div>
+          </div>
+       
+<!--
+          <p class="ad">
+              You Won't Believe How Many People Clicked Their Mouse Over 10 Times After Doing This
+          </p>
+-->
+          
+          
+<!--          MOUSES -->
+          <div class="mouses">
+              <div class="mouse3s">
+                  <video class="mouse3 show" data-index="0" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/mouse/mouse_3/mouse3_0.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="mouse3 hide fadein"  data-index="1" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/mouse/mouse_3/mouse3_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="mouse3 hide" data-index="2" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/mouse/mouse_3/mouse3_2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="mouse3 hide" data-index="3" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/mouse/mouse_3/mouse3_3.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="mouse3 hide" data-index="4" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/mouse/mouse_3/mouse3_4.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                </div>
+          </div>
+
+          
+<!--
+          <p class="ad">
+              93% Of People Successfully Moved Their Mouse Around After Doing This
+          </p>
+-->
+          
+<!--          SCROLLS -->
+          <div class="scrolls">
+              <div class="scroll1s">
+                  
+                <div id="set-height"></div>
+
+                <video class="scroll1 show" data-index="0" playsinline muted loop id="v0" autobuffer preload>
+                  <source src="assets/stock_vids/design/scroll/scroll_1/scroll1_0.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                <video class="scroll1 hide" data-index="1" playsinline muted loop id="v1" autobuffer preload>
+                  <source src="assets/stock_vids/design/scroll/scroll_1/scroll1_1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                <video class="scroll1 hide" data-index="2" playsinline muted loop id="v2" autobuffer preload>
+                  <source src="assets/stock_vids/design/scroll/scroll_1/scroll1_2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+
+                <video class="scroll1 hide" data-index="3" playsinline muted loop id="v3" autobuffer preload>
+                  <source src="assets/stock_vids/design/scroll/scroll_1/scroll1_3.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                </div>
+          </div>
+          
+<!--          TYPES -->
+          <div class="types">
+              <div class="type1s">
+                    <video class="type1 show" data-index="0" playsinline muted loop>
+                      <source src="assets/stock_vids/design/type/type_1/type1_0.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="type1 hide fadein"  data-index="1" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/type/type_1/type1_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="type1 hide" data-index="2" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/type/type_1/type1_2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="type1 hide" data-index="3" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/type/type_1/type1_3.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="type1 hide" data-index="4" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/type/type_1/type1_4.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+                  <video class="type1 hide" data-index="5" playsinline autoplay muted loop>
+                      <source src="assets/stock_vids/design/type/type_1/type1_5.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+              </div>
+          </div>
+          
+          
+          
+          
+          
+          
+      </div>
+  
+    <div class="pointer">
+        
+      <div id="timer">
+      </div>
+          
+      <p>
+        People Who Can Endure Boredom Are More Productive
+
+      </p>
+        
+      <p>
+        How Much Pain Can Humans Really Handle?
+      </p>
+        
+    </div>
+      
+      
+    
+      <div class="audios">
+          <audio id="audio" controls>
+              <source src="assets/audio/production_worker_interview_questions_D.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+    </div>
+      
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <script src="js/timer.js"></script>
+    <script src="js/textarea.js"></script>
+      
+    <script src="js/click.js"></script>
+    <script src="js/mouse.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/type.js"></script>
+      
+      
+
+  </body>
+</html>
