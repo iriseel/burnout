@@ -5,7 +5,7 @@ body {
     padding: 0;
     
     overflow-x:hidden;
-    overflow-y:hidden;
+    overflow-y:scroll;
     
     cursor: none; 
     
@@ -20,7 +20,7 @@ body {
 }
 
 /*TEXT STYLING*/
-h2 {
+h2, h3 {
     font-weight: normal;
     font-size: 32px;
     
@@ -37,21 +37,23 @@ ul {
     line-height:.75em;
 }
 
-.verb {
+.yellow {
 /*    font-size:32px;*/
     color:yellow;
 }
 
+/*
 .object {
     color:red;
 }
+*/
 
-.disease {
-    color:white;
+.black {
+    color:black;
 }
 
 a {
-    text-decoration: none;
+    text-decoration:underline;
     color:white;
 }
 
@@ -134,10 +136,20 @@ a {
 }
 
 /*REPORT*/
+.container_report {
+    width:100vw;
+    cursor:auto;
+/*    why doesn't this work??*/
+    padding-bottom:2em;
+}
+
 .report {
-    width:100%;
+    width:60%;
     height:100%;
+    
+/*    why doesn't this work??*/
     margin-bottom: 10%;
+    padding-bottom:2em;
     
     color:black;
     
@@ -147,8 +159,8 @@ a {
 }
 
 /*QUESTIONNAIRE / GRID*/
-.questionnaire {
-    font-size:2.5em;
+.questionnaire, .report h2, .report h3 {
+    font-size:2.5rem;
 }
 
 .questionnaire, .report {
@@ -156,7 +168,7 @@ a {
     margin: 20% 0;
 }
 
-.questionnaire h2, .questionnaire h3, .report h2, .report h3 {
+.questionnaire h2, .questionnaire h3 {
     font-size:1em;    
 }
 
@@ -167,6 +179,11 @@ a {
 .questionnaire h3, .report h3 {
     margin-top:0;
     padding-top:0;
+}
+
+.report h3 {
+    margin-top:2em;
+    margin-bottom:0.5em;
 }
 
 .insert, .insert input[type=text]::placeholder, .insert textarea::placeholder {
@@ -361,5 +378,10 @@ iframe, .about_video {
     right: 0;
     width:100%;
     height:100%;
+    border:none;
     
+}
+
+.report iframe, .report video {
+    padding:0 0 0.5em 0;
 }

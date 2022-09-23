@@ -44,7 +44,7 @@ var milliseconds_timer = setInterval(function(){
     clearInterval(minutes_timer);
       
       //!! CALLS CODA PAGE!!
-      window.location.href = "coda.html";
+      window.location.href = "about.html";
   }
     
     //??WHY IS THIS COUNTDOWN NOT LINING UP WITH SECONDS AND MINUTES????

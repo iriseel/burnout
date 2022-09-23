@@ -85,7 +85,7 @@ function scroll_gesture() {
 
                 
             //!! CALLS CODA PAGE!!
-            window.location.href = "coda.html";
+            window.location.href = "about.html";
                 
                 //???TRYING TO GET THIS TO STOP SCROLLING WHEN TRANSITIONING TO TYPE GESTURE????
                 $("body").css({
