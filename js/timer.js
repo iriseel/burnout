@@ -1,9 +1,7 @@
-//TIMED CODA (UPWARD) COUNTDOWN CREEP
+//MOUSE COUNTDOWN TIMER
 
 //POINTER JS
-var pointer = $(".pointer"),
-    timer = document.getElementById("timer");
-
+//makes timer fontsize enlarge
 var encroaching = setInterval(function() {
     //https://stackoverflow.com/questions/10507296/get-line-height-of-element-without-px
     //parsefloat gets rid of the px at end of retrieved font-size
@@ -18,7 +16,7 @@ var encroaching = setInterval(function() {
     
 }, 100);
 
-
+//makes .pointer follow mouse cursor (illusion of being the mouse)
 $(document).mousemove(function(e) {
      $('.pointer').css({left:e.pageX,top:e.pageY});
 
@@ -27,30 +25,39 @@ $(document).mousemove(function(e) {
 
 
 //TIMER JS
-
-var minutes_left = 5,
+var timer = document.getElementById("timer"),
+    minutes_left = 5,
     //need to define rounded values at first or else they show up as "undefined"
     minutes_left_rounded = 5,
     seconds_left = 300,
     seconds_left_rounded = 300,
     milliseconds_left = 300000,
-    milliseconds_left_rounded = 300000;
+    milliseconds_left_rounded = 300000,
+    
+    //countdown_interval value can't be too small, or else the function ends up running and updating faster than the browser can actually register / make the corresponding changes, so the countdown lags as a result
+    countdown_interval = 5;
 
 var milliseconds_timer = setInterval(function(){
     
   if(milliseconds_left_rounded <= 0){
     clearInterval(milliseconds_timer);
-    clearInterval(seconds_timer);
-    clearInterval(minutes_timer);
       
-      //!! CALLS CODA PAGE!!
+      //!! CALLS ABOUT PAGE!!
       window.location.href = "about.html";
   }
     
-    //??WHY IS THIS COUNTDOWN NOT LINING UP WITH SECONDS AND MINUTES????
-    milliseconds_left -= 1;
+    milliseconds_left -= countdown_interval;
     
-    milliseconds_left_rounded = Math.round(milliseconds_left);
+    //Use Math.floor instead of Math.round bc .round will round it up or down, while .floor is always down, so more consistent
+    milliseconds_left_rounded = Math.floor(milliseconds_left);
+    
+    seconds_left -= countdown_interval / 1000;
+    
+    seconds_left_rounded = Math.floor(seconds_left);
+      
+    minutes_left -= countdown_interval / 60000;
+    
+    minutes_left_rounded = Math.floor(minutes_left);
     
     
     if (click == true) {
@@ -66,24 +73,7 @@ var milliseconds_timer = setInterval(function(){
         timer.innerHTML = minutes_left_rounded + "m " + seconds_left_rounded + "s " + milliseconds_left_rounded + "ms <br /> left to type";
     }
     
-}, 1);
-
-var seconds_timer = setInterval(function(){
-    
-    seconds_left -= 1;
-    
-    seconds_left_rounded = Math.round(seconds_left);
-    
-}, 1000);
-
-var minutes_timer = setInterval(function(){
-    
-    minutes_left -= 1;
-    
-    minutes_left_rounded = Math.round(minutes_left);
-    
-}, 60000);
-
+}, countdown_interval);
 
 
 

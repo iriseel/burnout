@@ -31,27 +31,18 @@ function mouse_gesture() {
           var mouse_speed=movement/100;
 
     //    console.log("movement is " + movement);
-    //    document.getElementById("speed").innerText=Math.round(speed);
 
       };
 
       prevEvent=currentEvent;
       prevSpeed=speed;
 
-        console.log("SPEED IS" + speed);
+//        console.log("SPEED IS" + speed);
 
 
-    // ??? querySelectorAll doesn't work for some reason??? have to narrow down selector to just 1 element???? but moving this in here also doesn't work, the speed and mouse3.playbackRate eventually delinks anyways???
-        //??right now what happens is, the video that is set from fadein to show (i think) ends up going at the speed it was set to when it was fadein — so its speed is no longer linked to the mouse??
      mouse3 = document.querySelector('.mouse3.top');
 
-    // Loading the video after setting 
-    //mouse3.load();
-
-//        $(".mouse3.fadein").css({
-//            "opacity": opacity_mouse
-//        });
-
+     // Chrome clamps video playback rate to a range of 0.0625 - 16.0.
         if (speed < 0.0625) {
             mouse3.playbackRate = 0;
         }

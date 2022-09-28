@@ -9,7 +9,9 @@ function scroll_gesture() {
     $("body").css({
         "overflow-y": "visible"
     });
-
+    
+    
+    // !! THERE MAY BE A BETTER WAY OF CODING THIS GESTURE, USING WHEEL EVENTS (and the deltaY value): https://developer.mozilla.org/en-US/docs/Web/API/Element/wheel_event !!
     var frameNumber = 0, // start scroll_video at frame 0
         // lower numbers = faster playback
         playbackConst = 500, 
@@ -83,9 +85,8 @@ function scroll_gesture() {
             }
             else if (frameNumber >= 7.01 && scroll_vid_ended == 4) {
 
-                
-            //!! CALLS CODA PAGE!!
-            window.location.href = "about.html";
+                //!! CALLS ABOUT PAGE!!
+                window.location.href = "about.html";
                 
                 //???TRYING TO GET THIS TO STOP SCROLLING WHEN TRANSITIONING TO TYPE GESTURE????
                 $("body").css({
